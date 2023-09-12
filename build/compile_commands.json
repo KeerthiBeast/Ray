@@ -1,0 +1,8 @@
+[
+{
+  "directory": "/home/Keerthi/Ray/build",
+  "command": "/usr/bin/g++ -I/home/Keerthi/Ray/src -g -std=gnu++17 -Wnon-virtual-dtor -Wreorder -Wmaybe-uninitialized -Wunused-variable -o CMakeFiles/Ray.dir/src/main.cpp.o -c /home/Keerthi/Ray/src/main.cpp",
+  "file": "/home/Keerthi/Ray/src/main.cpp",
+  "output": "CMakeFiles/Ray.dir/src/main.cpp.o"
+}
+]

@@ -1,0 +1,3 @@
+/home/Keerthi/Ray/build/CMakeFiles/Ray.dir
+/home/Keerthi/Ray/build/CMakeFiles/edit_cache.dir
+/home/Keerthi/Ray/build/CMakeFiles/rebuild_cache.dir
