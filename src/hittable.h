@@ -9,14 +9,22 @@ class hit_record
         point3 p;
         vec3 normal;
         double t;
+        bool front_face;
+
+        void set_face_normal(const ray& r, const vec3& outward_normal) //Normal pointing against the ray
+        {
+            //Outward_normal is assumed to have unit length
+
+            front_face = dot(r.direction(), outward_normal) < 0; //If True the ray is outside else its internal
+            normal = front_face ? outward_normal : -outward_normal; //If internal changes the normal to point agaisnt the ray
+        }
 };
 
 class hittable
 {
-    virtual bool hit(const ray& r, double rayt_min, double rayt_max, hit_record& rec) const = 0;
-
     public:
         virtual ~hittable() = default;
+        virtual bool hit(const ray& r, double rayt_min, double rayt_max, hit_record& rec) const = 0;
 };
 
 #endif

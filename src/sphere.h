@@ -22,9 +22,9 @@ class sphere : public hittable
 
             auto discriminant = half_b*half_b - a*c;
             if(discriminant < 0) return false;
-            auto sqrtd = sqrt(discriminant);
 
             //Finding the nearest root in the acceptable range
+            auto sqrtd = sqrt(discriminant);
             auto root = (-half_b - sqrtd) / a;
             if(root <= ray_tmin || root >= ray_tmax)
             {
@@ -34,11 +34,12 @@ class sphere : public hittable
 
             rec.t = root;
             rec.p = r.at(rec.t);
-            rec.normal = (rec.p - centre) / radius;
+            vec3 outward_normal = (rec.p - centre) / radius;
+            rec.set_face_normal(r, outward_normal);
 
             return true;
         }
 
 };
 
-#endif SPHERE_h
+#endif 
