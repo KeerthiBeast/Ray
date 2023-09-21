@@ -4,6 +4,7 @@
 //Used header file 
 #include "vec3.h"
 #include "ray.h"
+#include "interval.h"
 
 #include <cmath>
 #include <memory>

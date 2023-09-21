@@ -13,6 +13,7 @@ set (SOURCE_RAY
     src/sphere.h
     src/hittable_list.h
     src/rtweekend.h
+    src/interval.h
 )
 
 include_directories(src)
