@@ -16,7 +16,7 @@ class hit_record
             //Outward_normal is assumed to have unit length
 
             front_face = dot(r.direction(), outward_normal) < 0; //If True the ray is outside else its internal
-            normal = front_face ? outward_normal : -outward_normal; //If internal changes the normal to point agaisnt the ray
+            normal = front_face ? outward_normal : -outward_normal; //If internal, changes the normal to point agaisnt the ray
         }
 };
 
