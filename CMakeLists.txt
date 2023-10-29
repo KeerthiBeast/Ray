@@ -5,15 +5,16 @@ set(CMAKE_CXX_STANDARD 17)
 
 set (SOURCE_RAY
 
-    src/main.cpp
     src/vec3.h
     src/ray.h
     src/color.h
+    src/camera.h
     src/hittable.h
     src/sphere.h
     src/hittable_list.h
     src/rtweekend.h
     src/interval.h
+    src/main.cpp
 )
 
 include_directories(src)

@@ -1,11 +1,6 @@
 #ifndef RTWEEKEND_H
 #define RTWEEKEND_H
 
-//Used header file 
-#include "vec3.h"
-#include "ray.h"
-#include "interval.h"
-
 #include <cmath>
 #include <memory>
 #include <cstdlib>
@@ -36,5 +31,10 @@ inline double random_double(double min, double max)
 {
     return min + (max-min)*random_double(); //Generate ramdom number with parameters
 }
+
+//Used header file 
+#include "vec3.h"
+#include "ray.h"
+#include "interval.h"
 
 #endif 
