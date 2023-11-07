@@ -14,6 +14,7 @@ set (SOURCE_RAY
     src/hittable_list.h
     src/rtweekend.h
     src/interval.h
+    src/material.h
     src/main.cpp
 )
 

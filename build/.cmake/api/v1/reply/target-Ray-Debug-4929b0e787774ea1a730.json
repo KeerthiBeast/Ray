@@ -26,13 +26,7 @@
 			{
 				"command" : 0,
 				"file" : 0,
-				"line" : 32,
-				"parent" : 0
-			},
-			{
-				"command" : 1,
-				"file" : 0,
-				"line" : 25,
+				"line" : 33,
 				"parent" : 0
 			},
 			{
@@ -54,9 +48,15 @@
 				"parent" : 0
 			},
 			{
+				"command" : 1,
+				"file" : 0,
+				"line" : 29,
+				"parent" : 0
+			},
+			{
 				"command" : 2,
 				"file" : 0,
-				"line" : 20,
+				"line" : 21,
 				"parent" : 0
 			}
 		]
@@ -104,7 +104,7 @@
 			},
 			"sourceIndexes" : 
 			[
-				9
+				10
 			]
 		}
 	],
@@ -145,14 +145,15 @@
 				5,
 				6,
 				7,
-				8
+				8,
+				9
 			]
 		},
 		{
 			"name" : "Source Files",
 			"sourceIndexes" : 
 			[
-				9
+				10
 			]
 		}
 	],
@@ -201,6 +202,11 @@
 		{
 			"backtrace" : 1,
 			"path" : "src/interval.h",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "src/material.h",
 			"sourceGroupIndex" : 0
 		},
 		{
