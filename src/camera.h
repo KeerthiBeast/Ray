@@ -2,11 +2,12 @@
 #define CAMERA_H
 
 #include "rtweekend.h"
-#include "color.h"
 #include "hittable.h"
 #include "material.h"
 
+#include <condition_variable>
 #include <iostream>
+#include <vector>
 
 class camera
 {
@@ -24,30 +25,6 @@ class camera
         double defocus_angle = 0;
         double focus_dist = 10;
 
-        void render(const hittable& world)
-        {
-            initialize();
-
-            std::cout<< "P3\n" << image_width << ' ' << image_height << "\n255\n";
-
-            for(int j=0; j<image_height; ++j)
-            {
-                std::clog<<"\rScanlines remaining: "<<(image_height-j)<<' '<<std::flush;
-                for(int i=0; i<image_width; ++i)
-                {
-                    color pixel_color(0,0,0);
-                    for(int sample=0; sample < samples_per_pixel; ++sample)
-                    {
-                        ray r = get_ray(i, j);
-                        pixel_color += ray_color(r, max_depth, world);
-                    }
-                    write_color(std::cout, pixel_color, samples_per_pixel);
-                }
-            }
-            std::clog<< "\rDone                 \n";
-        }
-
-    private:
         int image_height;   //Rendered image height
         point3 centre;      //Center of the camera
         point3 pixel00_loc; //Pixel 00 position
@@ -56,11 +33,13 @@ class camera
         vec3 u,v,w; //Camera frame basis vectors
         vec3 defocus_disk_u; //Defocus disk horizontal radius
         vec3 defocus_disk_v; //Vertical radius
+        int pixelcount;
 
         void initialize()
         {
             image_height = static_cast<int>(image_width / aspect_ratio);
             image_height = (image_height < 1) ? 1 : image_height;
+            pixelcount = image_width * image_height;
 
             centre = lookfrom;
 

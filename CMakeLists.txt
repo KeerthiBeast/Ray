@@ -7,7 +7,6 @@ set (SOURCE_RAY
 
     src/vec3.h
     src/ray.h
-    src/color.h
     src/camera.h
     src/hittable.h
     src/sphere.h

@@ -36,6 +36,5 @@ inline double random_double(double min, double max)
 #include "vec3.h"
 #include "ray.h"
 #include "interval.h"
-#include "color.h"
 
 #endif 

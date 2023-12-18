@@ -1,0 +1,3 @@
+/run/media/Keerthi/New Volume/Ray/buildlin/CMakeFiles/Ray.dir
+/run/media/Keerthi/New Volume/Ray/buildlin/CMakeFiles/edit_cache.dir
+/run/media/Keerthi/New Volume/Ray/buildlin/CMakeFiles/rebuild_cache.dir
