@@ -14,6 +14,7 @@ set (SOURCE_RAY
     src/rtweekend.h
     src/interval.h
     src/material.h
+    src/threadrender.h
     src/main.cpp
 )
 
